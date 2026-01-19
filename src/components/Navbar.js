@@ -90,7 +90,7 @@ function Navbar() {
   const EnhancedDropdown = ({ title, items, icon, dropdownName }) => (
     <li className="nav-item dropdown position-relative">
       <button
-        className="nav-link dropdown-toggle d-flex align-items-center gap-2 fw-semibold px-3 py-2 rounded-pill"
+        className="nav-link d-flex align-items-center gap-2 fw-semibold px-3 py-2 rounded-pill"
         onClick={() => {
           toggleDropdown(dropdownName);
           scrollToTop();
@@ -158,9 +158,6 @@ function Navbar() {
             </div>
             <div>
               <div className="fw-medium">{item.label}</div>
-              <small className="text-muted" style={{ fontSize: '0.75rem' }}>
-                Learn more
-              </small>
             </div>
           </Link>
         ))}
@@ -272,7 +269,7 @@ function Navbar() {
         className={`navbar navbar-expand-lg navbar-light sticky-top ${scrolled ? 'navbar-glass py-2' : 'py-3'}`}
         style={{
           transition: 'all 0.3s ease',
-          zIndex: 9999,        // ⭐ dropdown front-ல வர
+          zIndex: 9999,        
           position: 'relative'
         }}
       >
