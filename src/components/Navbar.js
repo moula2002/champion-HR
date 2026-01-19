@@ -139,7 +139,7 @@ function Navbar() {
             style={{
               transition: 'all 0.2s ease',
               color: '#2d3436',
-              textDecoration: 'none'
+
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%)';
@@ -237,11 +237,10 @@ function Navbar() {
           }
 
           .navbar-glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          }
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
 
           .search-slide {
             animation: fadeIn 0.3s ease forwards;
@@ -262,6 +261,13 @@ function Navbar() {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
           }
+            .navbar a,
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+  text-decoration: none !important;
+}
+
         `}
       </style>
 
@@ -269,7 +275,7 @@ function Navbar() {
         className={`navbar navbar-expand-lg navbar-light sticky-top ${scrolled ? 'navbar-glass py-2' : 'py-3'}`}
         style={{
           transition: 'all 0.3s ease',
-          zIndex: 9999,        
+          zIndex: 9999,
           position: 'relative'
         }}
       >
