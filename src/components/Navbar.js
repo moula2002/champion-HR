@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/Logo4.jpg';
 
@@ -46,10 +46,10 @@ function Navbar() {
   };
 
   // Close mobile menu when route changes
-  useEffect(() => {
-    closeMobileMenu();
-    scrollToTop(); // Scroll to top on route change
-  }, [location.pathname]);
+useEffect(() => {
+  closeMobileMenu();
+}, [closeMobileMenu]);
+
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
